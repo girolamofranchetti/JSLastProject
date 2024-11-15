@@ -25,6 +25,6 @@ font-size: 150%;
 border: 10px solid black;
 }
 img{
-    width:95%;
+    width:100%;
 }
-#images_cols { display: inline-block; flex-wrap: wrap; }
+#images_cols { display: flex; flex-wrap: wrap; }
