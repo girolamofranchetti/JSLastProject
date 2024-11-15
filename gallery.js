@@ -23,3 +23,33 @@ function upDate(previewPic){
       document.getElementById("image").style.backgroundImage = "url()"
       document.getElementById("image").innerHTML = "Hover over an image below to display here."
        }
+
+document.querySelectorAll('img').forEach(img => {
+    img.addEventListener('focus', function() {
+        document.getElementById('image').innerHTML = img.alt;
+    });
+    img.addEventListener('blur', function() {
+        document.getElementById('image').innerHTML = 'Hover over an image below to display here.';
+    });
+});
+function addTabIndex() {
+    document.querySelectorAll('img').forEach((img, index) => {
+        img.setAttribute('tabindex', index + 1);
+    });
+}
+document.querySelectorAll('img').forEach(img => {
+    img.addEventListener('focus', function() {
+        console.log('Evento focus attivato');
+    });
+});
+for (let i = 0; i < document.querySelectorAll('img').length; i++) {
+    document.querySelectorAll('img')[i].setAttribute('tabindex', i + 1);
+}
+document.querySelectorAll('img').forEach(img => {
+    img.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter') {
+            document.getElementById('image').innerHTML = img.alt;
+        }
+    });
+});
+
