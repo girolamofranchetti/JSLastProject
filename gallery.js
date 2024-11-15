@@ -52,4 +52,10 @@ document.querySelectorAll('img').forEach(img => {
         }
     });
 });
+function addTabIndex() {
+    document.querySelectorAll('img').forEach((img, index) => {
+        img.setAttribute('tabindex', index + 1);
+    });
+}
+
 
