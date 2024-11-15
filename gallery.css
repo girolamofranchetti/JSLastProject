@@ -27,4 +27,4 @@ border: 10px solid black;
 img{
     width:100%;
 }
-#images_cols { display: flex; flex-wrap: wrap; }
+#images_cols { display: inline-flex; flex-wrap: wrap; }
